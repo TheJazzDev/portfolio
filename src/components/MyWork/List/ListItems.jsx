@@ -4,7 +4,7 @@ import Card from './Card';
 
 const ListItems = ({ id }) => {
   return (
-    <ul className="flex flex-wrap items-start py-8 lg:pl-16 overflow-x-hidden">
+    <ul className="flex flex-wrap items-start py-8 lg:pl-16 overflow-x-hidden overflow-y-clip">
       {projectList.map((card, index) => (
         <Card
           key={card.id}

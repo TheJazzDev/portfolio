@@ -8,7 +8,7 @@ import {
   faHome,
   faUser,
   faGear,
-  faList,
+  faFolderClosed,
 } from '@fortawesome/free-solid-svg-icons';
 
 const Mobile = ({showMenu, closeMenu, setActive}) => {
@@ -56,7 +56,7 @@ const Mobile = ({showMenu, closeMenu, setActive}) => {
           ['/', faHome],
           ['/about', faUser],
           ['/skills', faGear],
-          ['/work', faList],
+          ['/work', faFolderClosed],
           ['/contact', faEnvelope],
         ].map(([url, icon]) => (
           <NavLink

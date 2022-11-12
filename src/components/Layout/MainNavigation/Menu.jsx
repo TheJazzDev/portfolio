@@ -2,9 +2,9 @@ import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faEnvelope,
+  faFolderClosed,
   faGear,
   faHome,
-  faList,
   faUser,
 } from '@fortawesome/free-solid-svg-icons'
 const Menu = () => {
@@ -14,7 +14,7 @@ const Menu = () => {
         ['/', faHome],
         ['/about', faUser],
         ['/skills', faGear],
-        ['/work', faList],
+        ['/work', faFolderClosed],
         ['/contact', faEnvelope],
       ].map(([ url, icon]) => (
         <NavLink

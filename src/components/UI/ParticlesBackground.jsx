@@ -42,6 +42,7 @@ const ParticlesBackground = () => {
       style={{
         width: '100%',
         height: '100%',
+        position: 'absolute'
       }}
       params={particlesConfig(color, size)}
     />

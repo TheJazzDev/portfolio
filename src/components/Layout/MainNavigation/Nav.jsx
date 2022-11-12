@@ -12,33 +12,32 @@ const Nav = () => {
 
   const toggleMenu = () => {
     show && setActive(true);
-    setShow(prev => !prev);
+    setShow((prev) => !prev);
   };
 
-
   return (
-    <div className="flex flex-row lg:flex-col items-center justify-between w-screen h-16 lg:w-16 lg:h-full fixed z-40 border-b lg:border-b-0 lg:border-r border-lightMode-200 bg-lightBackground/80 dark:bg-darkBackground/80 backdrop-blur-md px-8 lg:px-0">
+    <nav className="flex flex-row lg:flex-col items-center justify-between w-screen h-16 lg:w-16 lg:h-full fixed z-40 border-b lg:border-b-0 lg:border-r border-lightMode-200 bg-lightBackground/80 dark:bg-darkBackground/80 backdrop-blur-md px-8 lg:px-0">
       <Logo />
       <Menu />
       <Social />
       {!active && (
         <FontAwesomeIcon
           icon={faBars}
-          onClick={toggleMenu} 
+          onClick={toggleMenu}
           className="w-7 md:hidden text-6xl text-lightMode-100"
         />
       )}
       {active && (
         <FontAwesomeIcon
           icon={faClose}
-          onClick={toggleMenu} 
+          onClick={toggleMenu}
           className="w-6 md:hidden text-6xl text-lightMode-100"
         />
       )}
       {active && (
         <Mobile showMenu={show} closeMenu={toggleMenu} setActive={setActive} />
       )}
-    </div>
+    </nav>
   );
 };
 
