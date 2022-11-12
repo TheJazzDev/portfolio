@@ -1,0 +1,26 @@
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  min-width: 20px;
+}
+
+.text-animate-hover {
+  min-width: 20px;
+  display: inline-block;
+  animation-fill-mode: both;
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: #bbcbfb;
+  }
+}
+
+@for $i from 1 through 25 {
+  .text-animate._#{$i} {
+    animation-delay: #{$i / 10}s;
+  }
+}
