@@ -12,7 +12,6 @@ import {Resume} from '../components/Home/Resume';
 
 const router = createBrowserRouter([
   {
-    path: '/',
     element: (
       <>
         <Layout />

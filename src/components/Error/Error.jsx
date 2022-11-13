@@ -2,11 +2,12 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import ErrorImage from '../../assets/images/error-page.png';
 import Arrow from '../../assets/images/left-arrow.svg';
+import {LazyLoadImage} from 'react-lazy-load-image-component';
 
 const Error = () => {
   return (
     <div className="text-center lg:text-left flex flex-col lg:flex-row items-center justify-center bg-lightBackground dark:bg-darkBackground text-lightMode-paragraph dark:text-darkMode-paragraph h-screen px-8">
-      <img
+      <LazyLoadImage
         className="w-fit sm:h-2/5 lg:h-1/2"
         src={ErrorImage}
         alt="Error Page"
