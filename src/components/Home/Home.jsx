@@ -6,6 +6,7 @@ import useAnimatedLetters from '../../hooks/use-animatedletters';
 import Paragraph from './Paragraph';
 import Button from './Button';
 import Image from './Image';
+import Summary from './Summary';
 
 const Home = () => {
   const [animate, setAnimate] = useState();
@@ -58,6 +59,7 @@ const Home = () => {
           <h1 className="text-lightMode-100 text-4xl lg:text-6xl font-bold my-6">
             {Name}
           </h1>
+          <Summary />
           <TypewriterText />
           <Paragraph className="text" />
           <Button className="resume" />

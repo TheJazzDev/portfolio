@@ -16,7 +16,6 @@
 
 .mono {
   font-family: mono;
-  
 }
 
 #root {
@@ -25,6 +24,10 @@
 
 .tooltip {
   animation: slideInLeft 0.4s linear both;
+}
+
+.summaryText {
+  perspective: 1000px;
 }
 
 .progress-bar {

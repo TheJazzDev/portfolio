@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import useLoader from '../../hooks/use-loader';
 import useAnimatedLetters from '../../hooks/use-animatedletters';
 import Bio from './Bio';
-// import Card from './Card';
+import Image from './Image';
 
 const About = () => {
   const aboutMe = useRef();
@@ -47,7 +47,7 @@ const About = () => {
           </h2>
           <Bio className="content" />
         </div>
-        {/* <Card /> */}
+        <Image />
       </div>
     </section>
   );
