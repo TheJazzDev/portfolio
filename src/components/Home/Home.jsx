@@ -1,12 +1,12 @@
 import {useLayoutEffect, useRef, useState} from 'react';
 import gsap, {Power1} from 'gsap';
 import useLoader from '../../hooks/use-loader';
-import TypewriterText from './Typewriter';
+import Summary3D from './Summary3D';
+import SummaryTypewriter from './SummaryTypewriter';
 import useAnimatedLetters from '../../hooks/use-animatedletters';
 import Paragraph from './Paragraph';
 import Button from './Button';
 import Image from './Image';
-import Summary from './Summary';
 
 const Home = () => {
   const [animate, setAnimate] = useState();
@@ -25,8 +25,9 @@ const Home = () => {
           .from('.text p', {y: 100}, '-=0.8')
           .from('.resume', {y: 100}, '-=0.8');
         setAnimate(
-          gsap.to('.bg', {
+          gsap.to('#bg', {
             duration: 1,
+            opacity: 1,
             ease: Power1.inOut,
             rotation: 225,
             paused: true,
@@ -59,12 +60,12 @@ const Home = () => {
           <h1 className="text-lightMode-100 text-4xl lg:text-6xl font-bold my-6">
             {Name}
           </h1>
-          <Summary />
-          <TypewriterText />
+          <Summary3D />
+          <SummaryTypewriter />
           <Paragraph className="text" />
           <Button className="resume" />
         </div>
-        <Image id="imageRef" animate={animate} />
+        <Image id="bg" animate={animate} />
       </div>
     </section>
   );

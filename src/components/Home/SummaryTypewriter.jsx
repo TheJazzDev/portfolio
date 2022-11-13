@@ -1,6 +1,6 @@
 import Typewriter from 'typewriter-effect';
 
-const TypewriterText = () => {
+const SummaryTypewriter = () => {
   return (
     <div className="text-2xl hidden lg:block text-lightMode-paragraph dark:text-darkMode-heading font-semibold">
       <Typewriter
@@ -33,4 +33,4 @@ const TypewriterText = () => {
   );
 };
 
-export default TypewriterText;
+export default SummaryTypewriter;

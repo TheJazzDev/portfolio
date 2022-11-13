@@ -1,32 +1,46 @@
 import React, {useLayoutEffect, useRef} from 'react';
 import gsap from 'gsap';
 
-const Summary = () => {
+const Summary3D = () => {
   const summaryRef = useRef();
 
   useLayoutEffect(() => {
     let ctx;
     let animation = gsap.timeline({repeat: -1});
-    let stagger = 2;
+    let targets = document.querySelectorAll('.summaryText div');
+    let numberOfTargets = targets.length;
+
+    let duration = 0.8;
+    let pause = 1.5;
+
+    let stagger = duration + pause;
+    let repeatDelay = stagger * (numberOfTargets - 1) + pause;
 
     ctx = gsap.context(() => {
       gsap.set('.summaryText', {autoAlpha: 1});
-      gsap.set('.summaryText div', {transformOrigin: '50% 50% -40'});
+      gsap.set(targets, {transformOrigin: '50% 50% -30'});
       animation
-        .from('.summaryText div', {
+        .from(targets, {
           rotationX: -90,
-          rotationY: -60,
           opacity: 0,
-          stagger: stagger,
+          duration: duration,
+          stagger: {
+            each: stagger,
+            repeat: -1,
+            repeatDelay: repeatDelay,
+          },
         })
         .to(
-          '.summaryText div',
+          targets,
           {
             rotationX: 90,
-            rotationY: 45,
             opacity: 0,
-            duration: 1.5,
-            stagger: stagger,
+            duration: duration,
+            stagger: {
+              each: stagger,
+              repeat: -1,
+              repeatDelay: repeatDelay,
+            },
           },
           stagger
         );
@@ -47,4 +61,4 @@ const Summary = () => {
   );
 };
 
-export default Summary;
+export default Summary3D;
