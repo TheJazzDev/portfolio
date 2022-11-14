@@ -1,5 +1,6 @@
 import useLoader from '../../hooks/use-loader';
 import Nav from './MainNavigation/Nav';
+// import ParticlesBackground from '../UI/ParticlesBackground';
 
 const Layout = () => {
   const {loading, loader} = useLoader();
@@ -17,6 +18,7 @@ const Layout = () => {
           babsman4all@gmail.com
         </a>
       </div>
+      {/* <ParticlesBackground /> */}
     </div>
   );
 };

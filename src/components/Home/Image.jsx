@@ -5,7 +5,7 @@ const Image = ({id, animate}) => {
     <div
       onMouseEnter={() => animate.play()}
       onMouseLeave={() => animate.reverse()}
-      className="lg:p-8 h-2/5 flex items-end justify-center relative animate__animated animate__zoomInRight animate__slower">
+      className="lg:p-8 h-2/5 sm:h-1/3 lg:h-2/5 flex items-end justify-center relative animate__animated animate__zoomInRight animate__slower">
       <div
         id={id}
         className="border-4 border-dashed rounded-2xl border-lightMode-100 w-52 h-52 lg:w-64 lg:h-64 will-change-transform absolute bottom-4 lg:bottom-12 opacity-0"

@@ -24,7 +24,7 @@ const Mobile = ({showMenu, closeMenu, setActive}) => {
             setActive(false);
           },
         })
-        .from('.navAnimate', {xPercent: 100, ease: 'back',duration:0.3})
+        .from('.navAnimate', {xPercent: 100, ease: 'back',duration:0.4})
         .from(
           '.icon',
           {
