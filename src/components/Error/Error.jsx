@@ -3,14 +3,16 @@ import {Link} from 'react-router-dom';
 import ErrorImage from '../../assets/images/error-page.png';
 import Arrow from '../../assets/images/left-arrow.svg';
 import {LazyLoadImage} from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
 
 const Error = () => {
   return (
     <div className="text-center lg:text-left flex flex-col lg:flex-row items-center justify-center bg-lightBackground dark:bg-darkBackground text-lightMode-paragraph dark:text-darkMode-paragraph h-screen px-8">
       <LazyLoadImage
-        className="w-fit sm:h-2/5 lg:h-1/2"
+        className="max-h-96"
         src={ErrorImage}
         alt="Error Page"
+        effect="opacity"
       />
       <div className="flex flex-col items-center lg:items-start justify-center gap-6">
         <h1 className="text-7xl font-semibold ">Oops!</h1>
