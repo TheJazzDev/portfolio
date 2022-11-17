@@ -11,6 +11,7 @@ const Text = ({className}) => {
         <span className="text-lightMode-100">JavaScript</span>,{' '}
         <span className="text-lightMode-100">jQuery</span>,{' '}
         <span className="text-lightMode-100">React</span>,{' '}
+        <span className="text-lightMode-100">NextJS</span>,{' '}
         <span className="text-lightMode-100">TailWindCSS</span>,{' '}
         <span className="text-lightMode-100">Bootstrap</span>,{' '}
         <span className="text-lightMode-100">Sass</span> and{' '}

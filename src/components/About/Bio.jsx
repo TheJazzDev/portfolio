@@ -1,17 +1,19 @@
-const Bio = ({className}) => {
+const Bio = ({ id }) => {
   return (
-    <div className={className}>
-      <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[50rem] mb-5">
+    <div
+      id={id}
+      className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[50rem] [&>p]:mb-5 ">
+      <p>
         I'm a very ambitious front-end developer that is passionate about
         bringing business logic and designs to life.
       </p>
-      <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[50rem] mb-5">
+      <p>
         I became enthusiastic about web development in early 2022 when I worked
         as a Product Quality Assurance Person and equally incharge of a team of
         developers — turns out, I don't really like getting a 'No' for an
         answer, so I decided to learn programming to become well-informed.
       </p>
-      <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[50rem] mb-5">
+      <p>
         I'm a very ambitious front-end developer that is passionate about
         bringing business logic and designs to life. A fast learner with strong
         problem-solving skill and the ability to work well in a team. I'm

@@ -1,17 +1,32 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
   faBook,
   faClock,
   faCoins,
   faExternalLink,
   faList,
+  faMoon,
   faStopwatch,
-} from '@fortawesome/free-solid-svg-icons'
-import { faBowlFood } from '@fortawesome/free-solid-svg-icons'
+} from '@fortawesome/free-solid-svg-icons';
+import { faBowlFood } from '@fortawesome/free-solid-svg-icons';
 
 export const projectList = [
+  {
+    id: 'dark-jazz-theme',
+    title: 'Dark Jazz Theme',
+    description:
+      'A Visual Studio Code theme created for developers that d appreciate dark mode.',
+    languages: 'JavaScript',
+    github: <FontAwesomeIcon icon={faGithub} />,
+    githubLink: 'https://github.com/TaiwoJazz/Dark-Jazz',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink:
+      'https://marketplace.visualstudio.com/items?itemName=TaiwoJazz.dark-jazz&ssr=false#overview',
+    status: '(The Most Recent)',
+    icon: <FontAwesomeIcon icon={faMoon} />,
+  },
   {
     id: 'homely',
     title: 'Homely',
@@ -22,7 +37,6 @@ export const projectList = [
     githubLink: 'https://github.com/TaiwoJazz/homely',
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
     liveDemoLink: 'https://taiwojazz-homely.netlify.app/',
-    status: '(The Most Recent)',
     icon: <FontAwesomeIcon icon={faBowlFood} />,
   },
   {
@@ -92,4 +106,4 @@ export const projectList = [
   //   liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
   //   liveDemoLink: 'https://taiwojazz-tributepage.netlify.app/',
   // },
-]
+];
