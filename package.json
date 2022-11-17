@@ -1,6 +1,5 @@
 {
   "name": "my-portfolio",
-  "homepage": "https://taiwojazz.dev",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
