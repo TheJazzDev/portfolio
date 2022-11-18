@@ -1,5 +1,6 @@
 import {useLayoutEffect, useRef, useState} from 'react';
 import gsap, {Power1} from 'gsap';
+import useTitle from '../../hooks/use-title';
 import useLoader from '../../hooks/use-loader';
 import Summary3D from './Summary3D';
 import SummaryTypewriter from './SummaryTypewriter';
@@ -9,6 +10,8 @@ import Button from './Button';
 import Image from './Image';
 
 const Home = () => {
+  useTitle('Home - Taiwo Jazz')
+
   const [animate, setAnimate] = useState();
   const homepage = useRef();
   const {loading, loader} = useLoader();

@@ -1,11 +1,13 @@
 import React, { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
+import useTitle from '../../hooks/use-title';
 import useLoader from '../../hooks/use-loader';
 import useAnimatedLetters from '../../hooks/use-animatedletters';
 import Bio from './Bio';
 import Image from './Image';
 
 const About = () => {
+  useTitle('About - Taiwo Jazz')
   const aboutMe = useRef();
 
   const { loading, loader } = useLoader();

@@ -1,11 +1,14 @@
 import React, {useRef, useLayoutEffect} from 'react';
 import gsap from 'gsap';
+import useTitle from '../../hooks/use-title';
 import useLoader from '../../hooks/use-loader';
 import useAnimatedLetters from '../../hooks/use-animatedletters';
 import Text from './Text';
 import Cube from './Cube/Cube';
 
 const Skills = () => {
+  useTitle('Skills - Taiwo Jazz')
+
   const experience = useRef();
   const {loading, loader} = useLoader();
 

@@ -1,13 +1,16 @@
-import {useRef, useLayoutEffect} from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import gsap from 'gsap';
+import useTitle from '../../hooks/use-title';
 import useLoader from '../../hooks/use-loader';
 import Heading from './Heading';
 import Form from './Form/Form';
 
 const Contact = () => {
+  useTitle('Contact - Taiwo Jazz');
+  
   const contactMe = useRef();
 
-  const {loading, loader} = useLoader();
+  const { loading, loader } = useLoader();
 
   useLayoutEffect(() => {
     let ctx;
@@ -16,14 +19,14 @@ const Contact = () => {
       ctx = gsap.context(() => {
         gsap
           .timeline({
-            defaults: {opacity: 0, ease: 'back(3)', duration: 1},
+            defaults: { opacity: 0, ease: 'back(3)', duration: 1 },
           })
-          .from('#contact', {ease: 'linear', autoAlpha: 0})
-          .from('#content > p', {x: -100, stagger: 0.3})
-          .from('.form div', {x: 100}, '<')
-          .from('.form input', {x: 100, stagger: 0.2}, '-=0.8')
-          .from('.form textarea', {x: 100}, '-=0.8')
-          .from('.form span', {x: 100}, '-=0.8');
+          .from('#contact', { ease: 'linear', autoAlpha: 0 })
+          .from('#content > p', { x: -100, stagger: 0.3 })
+          .from('.form div', { x: 100 }, '<')
+          .from('.form input', { x: 100, stagger: 0.2 }, '-=0.8')
+          .from('.form textarea', { x: 100 }, '-=0.8')
+          .from('.form span', { x: 100 }, '-=0.8');
       }, contactMe);
     }
 

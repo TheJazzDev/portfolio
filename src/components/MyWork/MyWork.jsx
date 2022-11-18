@@ -1,5 +1,6 @@
 import {useLayoutEffect, useRef} from 'react';
 import {useParams} from 'react-router-dom';
+import useTitle from '../../hooks/use-title';
 import useLoader from '../../hooks/use-loader';
 import gsap from 'gsap';
 import Overlay from './Overlay/Overlay';
@@ -8,6 +9,8 @@ import {LayoutGroup, AnimatePresence} from 'framer-motion';
 import AnimatedHeading from './Helper/AnimatedHeading';
 
 const MyWork = () => {
+  useTitle('MyWork - Taiwo Jazz')
+
   const skills = useRef();
   const {id} = useParams();
   const {loading, loader} = useLoader();
