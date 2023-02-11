@@ -1,7 +1,7 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Text = ({className}) => {
+const Text = ({ className }) => {
   return (
     <div className={className}>
       <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[45rem] mb-5">
@@ -19,7 +19,7 @@ const Text = ({className}) => {
       </p>
 
       <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[45rem] mb-5">
-        Although I'm not much of a designer, I am aware with UI/UX design
+        Although I'm not much of a designer, but I am aware of UI/UX design
         principles and rules, therefore I pay close attention to design elements
         and enjoy putting my heart and soul into what I produce.
       </p>

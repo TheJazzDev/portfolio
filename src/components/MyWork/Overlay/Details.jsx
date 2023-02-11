@@ -33,15 +33,15 @@ const Details = ({ id }) => {
       </motion.div>
       <motion.div className="flex flex-col items-start md:items-end justify-between gap-2 md:gap-0 mt-6 w-1/2">
         <motion.div variants={slideInRight(1)} className="flex gap-8">
-          github && (
-          <a
-            href={githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xl md:text-lg hover:text-lightMode-100 transition-all duration-300 ease-in-out">
-            {github}
-          </a>
-          )
+          {github && (
+            <a
+              href={githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl md:text-lg hover:text-lightMode-100 transition-all duration-300 ease-in-out">
+              {github}
+            </a>
+          )}
           <a
             href={liveDemoLink}
             target="_blank"
