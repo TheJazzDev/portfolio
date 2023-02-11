@@ -18,19 +18,22 @@ const Details = ({ id }) => {
   } = projectList.find((item) => item.id === id);
 
   return (
-    <motion.div className="pt-[12rem] sm:pt-[19rem] md:pt-[23rem] max-w-[43.75rem] p-4 flex flex-col md:flex-row gap-1 md:gap-0 justify-between">
-      <motion.div className="lg:w-1/2">
+    <motion.div className="pt-[12rem] sm:pt-[19rem] md:pt-[23rem] max-w-[43.75rem] p-4 flex flex-col md:flex-row gap-1 md:gap-4 justify-between">
+      <motion.div>
         <motion.h2
           variants={slideInLeft(1)}
           className="text-[1.8rem] font-bold text-lightMode-100 dark:text-darkMode-card-text my-4">
           {title}
         </motion.h2>
-        <motion.p variants={slideInLeft(2)} className="tracking-tighter text-[.9rem]">
+        <motion.p
+          variants={slideInLeft(2)}
+          className="tracking-tighter text-[.9rem]">
           {description}
         </motion.p>
       </motion.div>
-      <motion.div className="flex flex-col items-start md:items-end justify-between gap-2 md:gap-0 mt-6">
+      <motion.div className="flex flex-col items-start md:items-end justify-between gap-2 md:gap-0 mt-6 w-1/2">
         <motion.div variants={slideInRight(1)} className="flex gap-8">
+          github && (
           <a
             href={githubLink}
             target="_blank"
@@ -38,6 +41,7 @@ const Details = ({ id }) => {
             className="text-xl md:text-lg hover:text-lightMode-100 transition-all duration-300 ease-in-out">
             {github}
           </a>
+          )
           <a
             href={liveDemoLink}
             target="_blank"
@@ -46,7 +50,9 @@ const Details = ({ id }) => {
             {liveDemo}
           </a>
         </motion.div>
-        <motion.p variants={slideInRight(2)} className="text-[.8rem] ">
+        <motion.p
+          variants={slideInRight(2)}
+          className="text-[.8rem] md:text-right">
           {languages}
         </motion.p>
       </motion.div>

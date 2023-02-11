@@ -6,7 +6,7 @@ import {
   slideInUp,
 } from '../../../components/UI/MotionFunction';
 
-const Card = ({ id, title, icon, status, index }) => {
+const Card = ({ id, title, icon, index }) => {
   return (
     <motion.li
       initial={'offscreen'}
@@ -26,9 +26,6 @@ const Card = ({ id, title, icon, status, index }) => {
             className="text-[1.4rem] font-bold mt-8 text-lightMode-300 dark:text-darkMode-card-text"
           >
             {title}
-            <span className="text-[.7rem] ml-1 text-lightMode-100">
-              {status}
-            </span>
           </motion.h2>
           <motion.div
             variants={slideInUp(1, 1)}

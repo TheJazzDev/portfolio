@@ -3,16 +3,26 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
   faBook,
-  faClock,
   faCoins,
   faExternalLink,
-  faList,
+  faLineChart,
   faMoon,
   faStopwatch,
 } from '@fortawesome/free-solid-svg-icons';
 import { faBowlFood } from '@fortawesome/free-solid-svg-icons';
 
 export const projectList = [
+  {
+    id: 'defttrader',
+    title: 'Deft Trader',
+    description:
+      'A forex brand that helps forex traders, investors and non forex traders to become profitable in the forex market.',
+    languages: 'NextJS TailwindCSS Firebase GSAP',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink:
+      'https://defttrader.com',
+    icon: <FontAwesomeIcon icon={faLineChart} />,
+  },
   {
     id: 'dark-jazz-theme',
     title: 'Dark Jazz Theme',
@@ -24,7 +34,6 @@ export const projectList = [
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
     liveDemoLink:
       'https://marketplace.visualstudio.com/items?itemName=TaiwoJazz.dark-jazz&ssr=false#overview',
-    status: '(The Most Recent)',
     icon: <FontAwesomeIcon icon={faMoon} />,
   },
   {
@@ -72,38 +81,5 @@ export const projectList = [
     liveDemoLink: 'https://taiwo-stopwatch.netlify.app/',
     icon: <FontAwesomeIcon icon={faStopwatch} />,
   },
-  {
-    id: 'digitalclock',
-    title: 'Digital Clock',
-    description:
-      'A digital clock built with vanilla javascript to keep track of time.',
-    languages: 'JS HTML CSS',
-    github: <FontAwesomeIcon icon={faGithub} />,
-    githubLink: 'https://github.com/TaiwoJazz/digital-clock',
-    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink: 'https://taiwo-digital-clock.netlify.app/',
-    icon: <FontAwesomeIcon icon={faClock} />,
-  },
-  {
-    id: 'jsdocumentation',
-    title: 'JS Documentation',
-    description: 'A basic ES5 JavaScript documentation for beginners',
-    languages: 'HTML CSS',
-    github: <FontAwesomeIcon icon={faGithub} />,
-    githubLink: 'https://github.com/TaiwoJazz/JS-Documentation',
-    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink: 'https://taiwojazz-js-documentation.netlify.app/',
-    icon: <FontAwesomeIcon icon={faList} />,
-  },
-  // {
-  //   id: 'tributepage',
-  //   title: 'Tribute Page',
-  //   description:
-  //     'Homely -  Is a food web application that allows customers ordered food',
-  //   languages: 'HTML CSS',
-  //   github: <FontAwesomeIcon icon={faGithub} />,
-  //   githubLink: 'https://github.com/TaiwoJazz/Tribute-page',
-  //   liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-  //   liveDemoLink: 'https://taiwojazz-tributepage.netlify.app/',
-  // },
+  
 ];

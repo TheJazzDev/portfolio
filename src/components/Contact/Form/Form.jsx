@@ -1,9 +1,9 @@
-import React, {useRef, useState} from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Sent from './Sent';
 import Sending from './Sending';
 
-const Form = ({className}) => {
+const Form = ({ className }) => {
   const [isSending, setIsSending] = useState(false);
   const [sent, setSent] = useState(false);
 
@@ -36,10 +36,10 @@ const Form = ({className}) => {
 
     emailjs
       .send(
-        'service_s7mucmk',
-        'template_ixmn6tb',
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         parameters,
-        'GL_VfhOvYN3IMeZNg'
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
@@ -59,8 +59,7 @@ const Form = ({className}) => {
 
   return (
     <div className={className}>
-      <div
-        className="relative p-8 md:p-12 w-fit max-w-[50rem] shadow-2xl bg-lightMode-card dark:bg-darkMode-card rounded-2xl mb-24 lg:mb-0">
+      <div className="relative p-8 md:p-12 w-fit max-w-[50rem] shadow-2xl bg-lightMode-card dark:bg-darkMode-card rounded-2xl mb-24 lg:mb-0">
         <form
           onSubmit={sendEmail}
           autoComplete="off"
