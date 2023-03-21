@@ -12,17 +12,17 @@ import {
 import { faBowlFood } from '@fortawesome/free-solid-svg-icons';
 
 export const projectList = [
-  {
-    id: 'defttrader',
-    title: 'Deft Trader',
-    description:
-      'A forex brand that helps forex traders, investors and non forex traders to become profitable in the forex market.',
-    languages: 'NextJS TailwindCSS Firebase GSAP',
-    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink:
-      'https://defttrader.com',
-    icon: <FontAwesomeIcon icon={faLineChart} />,
-  },
+  // {
+  //   id: 'defttrader',
+  //   title: 'Deft Trader',
+  //   description:
+  //     'A forex brand that helps forex traders, investors and non forex traders to become profitable in the forex market.',
+  //   languages: 'NextJS TailwindCSS Firebase GSAP',
+  //   liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+  //   liveDemoLink:
+  //     'https://defttrader.com',
+  //   icon: <FontAwesomeIcon icon={faLineChart} />,
+  // },
   {
     id: 'dark-jazz-theme',
     title: 'Dark Jazz Theme',
