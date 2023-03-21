@@ -5,7 +5,7 @@ import {
   faBook,
   faCoins,
   faExternalLink,
-  faLineChart,
+  //faLineChart,
   faMoon,
   faStopwatch,
 } from '@fortawesome/free-solid-svg-icons';
