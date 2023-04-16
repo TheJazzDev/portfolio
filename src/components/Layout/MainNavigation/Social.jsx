@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
   faLinkedin,
-  faWhatsapp,
   faTelegram,
 } from '@fortawesome/free-brands-svg-icons';
 
@@ -13,7 +12,6 @@ const Social = () => {
     <ul className="hidden text-center md:flex lg:flex-col items-center lg:mb-6">
       {[
         ['https://github.com/TaiwoJazz', faGithub],
-        ['https://wa.link/ldpr9d', faWhatsapp],
         ['https://t.me/TaiwoJazz', faTelegram],
         ['https://www.linkedin.com/in/taiwo-babarinde-17322946/', faLinkedin],
       ].map(([url, icon]) => (
