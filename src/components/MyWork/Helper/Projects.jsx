@@ -2,16 +2,33 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
-  faBook,
+  faCircle,
   faCoins,
   faExternalLink,
   faLineChart,
   faMoon,
-  faStopwatch,
 } from '@fortawesome/free-solid-svg-icons';
 import { faBowlFood } from '@fortawesome/free-solid-svg-icons';
 
 export const projectList = [
+  {
+    id: 'vastfluid',
+    title: 'VastFluid',
+    description: 'An inovative concentrated liquidity decentralized exchnage.',
+    languages: 'NextJs TailwindCSS GSAP',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink: 'https://landing-page-tan-nine-56.vercel.app/',
+    icon: <FontAwesomeIcon icon={faCircle} />,
+  },
+  {
+    id: 'vastfluidApp',
+    title: 'VastFluid App',
+    description: 'Decentralized finance exchange.',
+    languages: 'NextJs TailwindCSS GSAP',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink: 'https://app-placeholder-vastfluid.vercel.app/',
+    icon: <FontAwesomeIcon icon={faCircle} />,
+  },
   {
     id: 'defttrader',
     title: 'Deft Trader',
@@ -19,8 +36,7 @@ export const projectList = [
       'A forex brand that helps forex traders, investors and non forex traders to become profitable in the forex market.',
     languages: 'NextJS TailwindCSS Firebase GSAP',
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink:
-      'https://defttrader.com',
+    liveDemoLink: 'https://defttrader.com',
     icon: <FontAwesomeIcon icon={faLineChart} />,
   },
   {
@@ -59,27 +75,4 @@ export const projectList = [
     liveDemoLink: 'https://taiwojazz-crappo.netlify.app/',
     icon: <FontAwesomeIcon icon={faCoins} />,
   },
-  {
-    id: 'todo',
-    title: 'Todo App',
-    description: 'An app that allows you to keep track of your todo items.',
-    languages: 'React CSS3',
-    github: <FontAwesomeIcon icon={faGithub} />,
-    githubLink: 'https://github.com/TaiwoJazz/Todo-App',
-    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink: 'https://taiwojazz-todoapp.netlify.app/',
-    icon: <FontAwesomeIcon icon={faBook} />,
-  },
-  {
-    id: 'stopwatch',
-    title: 'Stopwatch',
-    description: 'A digital stopwatch built with vanilla javascript.',
-    languages: 'JS HTML CSS',
-    github: <FontAwesomeIcon icon={faGithub} />,
-    githubLink: 'https://github.com/TaiwoJazz/stopwatch',
-    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink: 'https://taiwo-stopwatch.netlify.app/',
-    icon: <FontAwesomeIcon icon={faStopwatch} />,
-  },
-  
 ];
