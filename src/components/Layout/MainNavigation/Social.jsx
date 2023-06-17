@@ -11,9 +11,10 @@ const Social = () => {
   return (
     <ul className="hidden text-center md:flex lg:flex-col items-center lg:mb-6">
       {[
+        ['https://twitter.com/jazz__dev', faGithub],
+        ['https://www.linkedin.com/in/taiwo-babarinde-17322946/', faLinkedin],
         ['https://github.com/TaiwoJazz', faGithub],
         ['https://t.me/TaiwoJazz', faTelegram],
-        ['https://www.linkedin.com/in/taiwo-babarinde-17322946/', faLinkedin],
       ].map(([url, icon]) => (
         <li key={url}>
           <a
