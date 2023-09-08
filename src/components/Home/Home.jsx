@@ -42,7 +42,7 @@ const Home = () => {
     return () => ctx && ctx.revert();
   }, [loading]);
 
-  const name = 'Taiwo Adewale';
+  const name = 'Taiwo Babarinde';
 
   const {letters: Name} = useAnimatedLetters({
     strArray: name.split(''),
@@ -68,7 +68,7 @@ const Home = () => {
           <Paragraph className="text" />
           <Button className="resume" />
         </div>
-        <Image id="bg" animate={animate} />
+        <Image id="bg" animate={animate} loading={loading} />
       </div>
     </section>
   );

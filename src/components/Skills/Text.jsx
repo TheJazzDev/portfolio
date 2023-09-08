@@ -5,13 +5,16 @@ const Text = ({ className }) => {
   return (
     <div className={className}>
       <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[45rem] mb-5">
-        A Front-end developer currently working with technologies like{' '}
+        A Software Engineer currently working with technologies like{' '}
         <span className="text-lightMode-100">HTML</span>,{' '}
         <span className="text-lightMode-100">CSS3</span>,{' '}
         <span className="text-lightMode-100">JavaScript</span>,{' '}
         <span className="text-lightMode-100">jQuery</span>,{' '}
         <span className="text-lightMode-100">React</span>,{' '}
         <span className="text-lightMode-100">NextJS</span>,{' '}
+        <span className="text-lightMode-100">Python</span>,{' '}
+        <span className="text-lightMode-100">Django</span>,{' '}
+        <span className="text-lightMode-100">Flask</span>,{' '}
         <span className="text-lightMode-100">TailWindCSS</span>,{' '}
         <span className="text-lightMode-100">Bootstrap</span>,{' '}
         <span className="text-lightMode-100">Sass</span>,{' '}
