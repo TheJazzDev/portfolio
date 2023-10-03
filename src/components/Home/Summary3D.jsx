@@ -52,7 +52,7 @@ const Summary3D = () => {
   return (
     <div className="h-12 lg:hidden" ref={summaryRef}>
       <div className="summaryText flex items-center justify-center lg:justify-start whitespace-nowrap invisible h-full [&>div]:text-2xl [&>div]:text-lightMode-paragraph [&>div]:dark:text-darkMode-heading [&>div]:font-semibold [&>div]:absolute">
-        <div>Software Engineer</div>
+        <div>Software Developer</div>
         <div>Interactive Animator</div>
         <div>Freelancer</div>
         <div>Crypto Enthusiast</div>

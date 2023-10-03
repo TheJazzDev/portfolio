@@ -14,6 +14,7 @@ const Image = ({id, animate}) => {
         src={Taiwo}
         className="image rounded-full border-lightMode-100 z-10 shadow-xl border-b-8 w-64 lg:w-80 hover:transition-all hover:ease-in-out hover:duration-300 transition-all ease-in-out duration-300"
         alt="Taiwo Jazz"
+        loading="lazy"
       />
     </div>
   );
