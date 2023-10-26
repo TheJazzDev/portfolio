@@ -5,12 +5,24 @@ import {
   faCircle,
   faCoins,
   faExternalLink,
+  faKeyboard,
   faLineChart,
   faMoon,
 } from '@fortawesome/free-solid-svg-icons';
 import { faBowlFood } from '@fortawesome/free-solid-svg-icons';
 
 export const projectList = [
+  {
+    id: 'typeguru',
+    title: 'TypeGuru',
+    description: 'A touch typing website.',
+    languages: 'Django Javascript TailwindCSS',
+    github: <FontAwesomeIcon icon={faGithub} />,
+    githubLink: 'https://github.com/TheJazzDev/typeguru',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink: 'https://typeguru-jazzdev.vercel.app/',
+    icon: <FontAwesomeIcon icon={faKeyboard} />,
+  },
   {
     id: 'vastfluid',
     title: 'VastFluid',
@@ -64,15 +76,15 @@ export const projectList = [
     liveDemoLink: 'https://taiwojazz-homely.netlify.app/',
     icon: <FontAwesomeIcon icon={faBowlFood} />,
   },
-  {
-    id: 'crappo',
-    title: 'Crappo',
-    description: 'Crappo -  Is a cryptocurrency website.',
-    languages: 'React TailwindCSS',
-    github: <FontAwesomeIcon icon={faGithub} />,
-    githubLink: 'https://github.com/TaiwoJazz/crappo-cryptocurrency',
-    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink: 'https://taiwojazz-crappo.netlify.app/',
-    icon: <FontAwesomeIcon icon={faCoins} />,
-  },
+  // {
+  //   id: 'crappo',
+  //   title: 'Crappo',
+  //   description: 'Crappo -  Is a cryptocurrency website.',
+  //   languages: 'React TailwindCSS',
+  //   github: <FontAwesomeIcon icon={faGithub} />,
+  //   githubLink: 'https://github.com/TaiwoJazz/crappo-cryptocurrency',
+  //   liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+  //   liveDemoLink: 'https://taiwojazz-crappo.netlify.app/',
+  //   icon: <FontAwesomeIcon icon={faCoins} />,
+  // },
 ];
