@@ -2,11 +2,11 @@ import classes from './Cube.module.css';
 import {useRef} from 'react';
 import {motion, useAnimationFrame} from 'framer-motion';
 import {
-  faBootstrap,
   faCss3,
   faGitAlt,
   faHtml5,
   faJsSquare,
+  faPython,
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -25,11 +25,11 @@ const Cube = ({id}) => {
       <div className={classes.cube} ref={ref}>
         {[
           [`${classes.side} ${classes.front}`, faReact, '#61dbfb'],
-          [`${classes.side} ${classes.left}`, faHtml5, '#61dbfb'],
+          [`${classes.side} ${classes.left}`, faPython, '#61dbfb'],
           [`${classes.side} ${classes.right}`, faCss3, '#28A4D9'],
           [`${classes.side} ${classes.top}`, faJsSquare, '#EFD81D'],
           [`${classes.side} ${classes.bottom}`, faGitAlt, '#EC4D28'],
-          [`${classes.side} ${classes.back}`, faBootstrap, '#563d7c'],
+          [`${classes.side} ${classes.back}`, faHtml5, '#563d7c'],
         ].map(([sides, icon, color]) => (
           <div key={icon + sides} className={sides}>
             <FontAwesomeIcon icon={icon} color={color} />

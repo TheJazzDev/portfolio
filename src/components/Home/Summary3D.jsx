@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useRef} from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const Summary3D = () => {
@@ -6,7 +6,7 @@ const Summary3D = () => {
 
   useLayoutEffect(() => {
     let ctx;
-    let animation = gsap.timeline({repeat: -1});
+    let animation = gsap.timeline({ repeat: -1 });
     let targets = document.querySelectorAll('.summaryText div');
     let numberOfTargets = targets.length;
 
@@ -17,8 +17,8 @@ const Summary3D = () => {
     let repeatDelay = stagger * (numberOfTargets - 1) + pause;
 
     ctx = gsap.context(() => {
-      gsap.set('.summaryText', {autoAlpha: 1});
-      gsap.set(targets, {transformOrigin: '50% 50% -30'});
+      gsap.set('.summaryText', { autoAlpha: 1 });
+      gsap.set(targets, { transformOrigin: '50% 50% -30' });
       animation
         .from(targets, {
           rotationX: -90,
@@ -52,10 +52,10 @@ const Summary3D = () => {
   return (
     <div className="h-12 lg:hidden" ref={summaryRef}>
       <div className="summaryText flex items-center justify-center lg:justify-start whitespace-nowrap invisible h-full [&>div]:text-2xl [&>div]:text-lightMode-paragraph [&>div]:dark:text-darkMode-heading [&>div]:font-semibold [&>div]:absolute">
-        <div>Web Developer</div>
-        <div>Crypto Enthusiast</div>
+        <div>Software Developer</div>
         <div>Interactive Animator</div>
         <div>Freelancer</div>
+        <div>Crypto Enthusiast</div>
       </div>
     </div>
   );

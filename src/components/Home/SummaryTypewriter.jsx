@@ -11,7 +11,7 @@ const SummaryTypewriter = () => {
         onInit={(typewriter) => {
           typewriter
             .pauseFor(2500)
-            .typeString('Web Developer')
+            .typeString('Software Developer')
             .pauseFor(2000)
             .deleteAll(40)
             .pauseFor(5)

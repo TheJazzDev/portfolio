@@ -42,7 +42,7 @@ const Home = () => {
     return () => ctx && ctx.revert();
   }, [loading]);
 
-  const name = 'Taiwo Adewale';
+  const name = 'Taiwo Babarinde';
 
   const {letters: Name} = useAnimatedLetters({
     strArray: name.split(''),
@@ -55,7 +55,7 @@ const Home = () => {
     <section ref={homepage}>
       <div
         id="home"
-        className="invisible h-screen lg:ml-16 mx-auto px-8 pt-24 lg:pt-0 flex flex-col-reverse lg:flex-row items-center justify-center gap-20 lg:gap-16 xl:gap-32">
+        className="invisible h-screen lg:ml-16 mx-auto px-8 pt-24 lg:pt-0 flex flex-col-reverse lg:flex-row items-center justify-center gap-20 lg:gap-16 xl:gap-32 pb-12 md:pb-0">
         <div className="text-center lg:text-left z-50 h-1/2 flex flex-col items-center lg:items-start justify-start lg:justify-center">
           <div className="intro text-lightMode-100 text-[1rem]">
             Hi, my name is
@@ -68,7 +68,7 @@ const Home = () => {
           <Paragraph className="text" />
           <Button className="resume" />
         </div>
-        <Image id="bg" animate={animate} />
+        <Image id="bg" animate={animate} loading={loading} />
       </div>
     </section>
   );

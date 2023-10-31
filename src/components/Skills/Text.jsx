@@ -1,25 +1,29 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Text = ({className}) => {
+const Text = ({ className }) => {
   return (
     <div className={className}>
       <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[45rem] mb-5">
-        A Front-end developer currently working with technologies like{' '}
+        A Software Engineer currently working with technologies like{' '}
         <span className="text-lightMode-100">HTML</span>,{' '}
         <span className="text-lightMode-100">CSS3</span>,{' '}
         <span className="text-lightMode-100">JavaScript</span>,{' '}
         <span className="text-lightMode-100">jQuery</span>,{' '}
         <span className="text-lightMode-100">React</span>,{' '}
         <span className="text-lightMode-100">NextJS</span>,{' '}
+        <span className="text-lightMode-100">Python</span>,{' '}
+        <span className="text-lightMode-100">Django</span>,{' '}
+        <span className="text-lightMode-100">Flask</span>,{' '}
         <span className="text-lightMode-100">TailWindCSS</span>,{' '}
         <span className="text-lightMode-100">Bootstrap</span>,{' '}
-        <span className="text-lightMode-100">Sass</span> and{' '}
-        <span className="text-lightMode-100">Git</span>.
+        <span className="text-lightMode-100">Sass</span>,{' '}
+        <span className="text-lightMode-100">Git</span> and{' '}
+        <span className="text-lightMode-100">GSAP</span>.
       </p>
 
       <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[45rem] mb-5">
-        Although I'm not much of a designer, I am aware with UI/UX design
+        Although I'm not much of a designer, but I am aware of UI/UX design
         principles and rules, therefore I pay close attention to design elements
         and enjoy putting my heart and soul into what I produce.
       </p>
