@@ -1,7 +1,6 @@
-import {useLayoutEffect, useRef, useState} from 'react';
-import gsap, {Power1} from 'gsap';
-import useTitle from '../../hooks/use-title';
-import useLoader from '../../hooks/use-loader';
+import { useRef, useState } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import Summary3D from './Summary3D';
 import SummaryTypewriter from './SummaryTypewriter';
 import useAnimatedLetters from '../../hooks/use-animatedletters';
@@ -10,48 +9,37 @@ import Button from './Button';
 import Image from './Image';
 
 const Home = () => {
-  useTitle('Home - Taiwo Jazz')
-
   const [animate, setAnimate] = useState();
   const homepage = useRef();
-  const {loading, loader} = useLoader();
 
-  useLayoutEffect(() => {
-    let ctx;
+  useGSAP(
+    () => {
+      gsap
+        .timeline({ defaults: { opacity: 0, ease: 'back(3)', duration: 1 } })
+        .from('#home', { ease: 'linear', autoAlpha: 0 })
+        .from('.intro', { x: 100 })
+        .from('.text p', { y: 100 }, '-=0.8')
+        .from('.resume', { y: 100 }, '-=0.8');
+        
+      setAnimate(
+        gsap.to('#bg', {
+          duration: 0.7,
+          opacity: 1,
+          ease: 'power1.inOut',
+          rotation: 225,
+          paused: true,
+        })
+      );
+    },
+    { scope: homepage }
+  );
 
-    if (!loading) {
-      ctx = gsap.context(() => {
-        gsap
-          .timeline({defaults: {opacity: 0, ease: 'back(3)', duration: 1}})
-          .from('#home', {ease: 'linear', autoAlpha: 0})
-          .from('.intro', {x: 100})
-          .from('.text p', {y: 100}, '-=0.8')
-          .from('.resume', {y: 100}, '-=0.8');
-        setAnimate(
-          gsap.to('#bg', {
-            duration: 1,
-            opacity: 1,
-            ease: Power1.inOut,
-            rotation: 225,
-            paused: true,
-          })
-        );
-      }, homepage);
-    }
-
-    return () => ctx && ctx.revert();
-  }, [loading]);
-
-  const name = 'Taiwo Babarinde';
-
-  const {letters: Name} = useAnimatedLetters({
-    strArray: name.split(''),
+  const { letters: Name } = useAnimatedLetters({
+    strArray: 'Taiwo Babarinde'.split(''),
     index: 1,
   });
 
-  return loading ? (
-    loader
-  ) : (
+  return (
     <section ref={homepage}>
       <div
         id="home"
@@ -68,7 +56,7 @@ const Home = () => {
           <Paragraph className="text" />
           <Button className="resume" />
         </div>
-        <Image id="bg" animate={animate} loading={loading} />
+        <Image id="bg" animate={animate} />
       </div>
     </section>
   );

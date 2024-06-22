@@ -1,12 +1,12 @@
-import React, {useContext, useState} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faMoon, faSun} from '@fortawesome/free-solid-svg-icons';
-import ThemeContext from '../../../store/theme-context';
-import backgroundColor from '../../../store/BackgroundColor';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { useThemeContext } from '../../../context/ThemeContext';
+import backgroundColor from '../../../utils/BackgroundColor';
 
-const Toggle = ({className, onClick}) => {
+const Toggle = ({ className, onClick }) => {
   const [toolTip, setToolTip] = useState(false);
-  const {theme, setTheme} = useContext(ThemeContext);
+  const { theme, setTheme } = useThemeContext();
 
   const themeHandler = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark');
@@ -23,10 +23,10 @@ const Toggle = ({className, onClick}) => {
 
   switch (theme) {
     case 'dark':
-      backgroundColor({color: '#0D0D2B'});
+      backgroundColor({ color: '#0D0D2B' });
       break;
     case 'light':
-      backgroundColor({color: '#e5f2ff'});
+      backgroundColor({ color: '#e5f2ff' });
       break;
     default:
       break;

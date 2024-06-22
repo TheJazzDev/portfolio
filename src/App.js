@@ -1,21 +1,22 @@
-import React from 'react';
-import ThemeProvider from './store/ThemeProvider';
-import {motion, useScroll, useSpring} from 'framer-motion';
-import './App.css';
-import Routes from './Routes/Routes';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TransitionProvider } from './context/TransitionContext';
+import { ThemeProvider } from './context/ThemeContext';
+import useDocumentTitle from './hooks/useDocumentTitle';
+import RoutesContainer from './router/Routes';
+import Layout from './components/Layout/Layout';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-  const {scrollYProgress} = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
+  useDocumentTitle();
 
   return (
     <ThemeProvider>
-      <motion.div className="progress-bar" style={{scaleX}} />
-      <Routes />
+      <TransitionProvider>
+        <Layout />
+        <RoutesContainer />
+      </TransitionProvider>
     </ThemeProvider>
   );
 }

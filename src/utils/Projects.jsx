@@ -1,17 +1,49 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import {
-  faCircle,
-  faCoins,
-  faExternalLink,
-  faKeyboard,
-  faLineChart,
-  faMoon,
-} from '@fortawesome/free-solid-svg-icons';
-import { faBowlFood } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 
 export const projectList = [
+  {
+    id: 'digit-tally',
+    title: 'Digit Tally',
+    description: 'A financial app that helps users track their finances.',
+    languages: 'NextJs TanstackQuery Redux TailwindCSS',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink: 'https://devsvr.digit-tally.io',
+  },
+  {
+    id: 'mr-oshodi',
+    title: 'Mr Oshodi',
+    description: 'Personal portfolio website.',
+    languages: 'React GSAP TailwindCSS',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink: 'https://mr-oshodi.vercel.app/',
+  },
+  {
+    id: 'candour-it',
+    title: 'Candour IT Services',
+    description: 'IT consulting website.',
+    languages: 'React GSAP TailwindCSS',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink: 'https://candour-website.vercel.app/',
+  },
+  {
+    id: 'candour-training',
+    title: 'Candour Training',
+    description: 'An IT training website.',
+    languages: 'React GSAP TailwindCSS',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink: 'https://candour-training.vercel.app/',
+  },
+  {
+    id: 'candour-rentals',
+    title: 'Candour Rental Services',
+    description: 'A car rental website.',
+    languages: 'React GSAP TailwindCSS',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink: 'https://candour-rentals.vercel.app/',
+  },
   {
     id: 'typeguru',
     title: 'TypeGuru',
@@ -21,7 +53,6 @@ export const projectList = [
     githubLink: 'https://github.com/TheJazzDev/typeguru',
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
     liveDemoLink: 'https://typeguru-jazzdev.vercel.app/',
-    icon: <FontAwesomeIcon icon={faKeyboard} />,
   },
   {
     id: 'vastfluid',
@@ -30,7 +61,6 @@ export const projectList = [
     languages: 'NextJs TailwindCSS GSAP',
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
     liveDemoLink: 'https://landing-page-tan-nine-56.vercel.app/',
-    icon: <FontAwesomeIcon icon={faCircle} />,
   },
   {
     id: 'vastfluidApp',
@@ -39,7 +69,6 @@ export const projectList = [
     languages: 'NextJs TailwindCSS GSAP',
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
     liveDemoLink: 'https://app-placeholder-vastfluid.vercel.app/',
-    icon: <FontAwesomeIcon icon={faCircle} />,
   },
   {
     id: 'defttrader',
@@ -49,7 +78,6 @@ export const projectList = [
     languages: 'NextJS TailwindCSS Firebase GSAP',
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
     liveDemoLink: 'https://defttrader.com',
-    icon: <FontAwesomeIcon icon={faLineChart} />,
   },
   {
     id: 'dark-jazz-theme',
@@ -62,29 +90,26 @@ export const projectList = [
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
     liveDemoLink:
       'https://marketplace.visualstudio.com/items?itemName=TaiwoJazz.dark-jazz&ssr=false#overview',
-    icon: <FontAwesomeIcon icon={faMoon} />,
   },
   {
     id: 'homely',
     title: 'Homely',
     description:
-      'Homely -  Is a food web application that allows customers to order food',
+      'A food web application that allows customers to order food',
     languages: 'React TailwindCSS Formik Firebase',
     github: <FontAwesomeIcon icon={faGithub} />,
     githubLink: 'https://github.com/TaiwoJazz/homely',
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink: 'https://taiwojazz-homely.netlify.app/',
-    icon: <FontAwesomeIcon icon={faBowlFood} />,
+    liveDemoLink: 'https://app-homely.netlify.app/',
   },
-  // {
-  //   id: 'crappo',
-  //   title: 'Crappo',
-  //   description: 'Crappo -  Is a cryptocurrency website.',
-  //   languages: 'React TailwindCSS',
-  //   github: <FontAwesomeIcon icon={faGithub} />,
-  //   githubLink: 'https://github.com/TaiwoJazz/crappo-cryptocurrency',
-  //   liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-  //   liveDemoLink: 'https://taiwojazz-crappo.netlify.app/',
-  //   icon: <FontAwesomeIcon icon={faCoins} />,
-  // },
+  {
+    id: 'crappo',
+    title: 'Crappo',
+    description: 'A cryptocurrency website.',
+    languages: 'React TailwindCSS',
+    github: <FontAwesomeIcon icon={faGithub} />,
+    githubLink: 'https://github.com/TaiwoJazz/crappo-cryptocurrency',
+    liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
+    liveDemoLink: 'https://app-ldiev-crappo.netlify.app/',
+  },
 ];

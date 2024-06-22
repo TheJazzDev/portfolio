@@ -1,49 +1,36 @@
-import React, {useRef, useLayoutEffect} from 'react';
+import React, { useRef } from 'react';
 import gsap from 'gsap';
-import useTitle from '../../hooks/use-title';
-import useLoader from '../../hooks/use-loader';
+import { useGSAP } from '@gsap/react';
 import useAnimatedLetters from '../../hooks/use-animatedletters';
 import Text from './Text';
 import Cube from './Cube/Cube';
 
 const Skills = () => {
-  useTitle('Skills - Taiwo Jazz')
-
   const experience = useRef();
-  const {loading, loader} = useLoader();
 
-  useLayoutEffect(() => {
-    let ctx;
+  useGSAP(
+    () => {
+      gsap
+        .timeline({
+          defaults: { opacity: 0, ease: 'back(3)', duration: 1 },
+        })
+        .from('#skill', { ease: 'linear', autoAlpha: 0 })
+        .from('.content > p', { x: -100, stagger: 0.3 })
+        .from(
+          '#cube',
+          { x: 400, rotate: 180, scale: 3, duration: 3, ease: 'bounce' },
+          '<'
+        );
+    },
+    { scope: experience }
+  );
 
-    if (!loading) {
-      ctx = gsap.context(() => {
-        gsap
-          .timeline({
-            defaults: {opacity: 0, ease: 'back(3)', duration: 1},
-          })
-          .from('#skill', {ease: 'linear', autoAlpha: 0})
-          .from('.content > p', {x: -100, stagger: 0.3})
-          .from(
-            '#cube',
-            {x: 400, rotate: 180, scale: 3, duration: 3, ease: 'bounce'},
-            '<'
-          );
-      }, experience);
-    }
-
-    return () => ctx && ctx.revert();
-  }, [loading]);
-
-  let string = 'Skills & Experience';
-
-  const {letters: Heading} = useAnimatedLetters({
-    strArray: string.split(''),
+  const { letters: Heading } = useAnimatedLetters({
+    strArray: 'Skills & Experience'.split(''),
     index: 1,
   });
 
-  return loading ? (
-    loader
-  ) : (
+  return (
     <section ref={experience}>
       <div
         id="skill"

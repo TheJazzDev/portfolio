@@ -1,44 +1,31 @@
-import React, { useRef, useLayoutEffect } from 'react';
+import React, { useRef } from 'react';
 import gsap from 'gsap';
-import useTitle from '../../hooks/use-title';
-import useLoader from '../../hooks/use-loader';
+import { useGSAP } from '@gsap/react';
 import useAnimatedLetters from '../../hooks/use-animatedletters';
 import Bio from './Bio';
 import Image from './Image';
 
 const About = () => {
-  useTitle('About - Taiwo Jazz')
   const aboutMe = useRef();
 
-  const { loading, loader } = useLoader();
-
-  useLayoutEffect(() => {
-    let ctx;
-
-    if (!loading) {
-      ctx = gsap.context(() => {
-        gsap
-          .timeline({
-            defaults: { opacity: 0, ease: 'back(3)', duration: 1 },
-          })
-          .from('#about', { ease: 'linear', autoAlpha: 0 })
-          .from('#content > p', { x: -100, stagger: 0.3 });
-      }, aboutMe);
-    }
-
-    return () => ctx && ctx.revert();
-  }, [loading]);
-
-  let string = 'About Me';
+  useGSAP(
+    () => {
+      gsap
+        .timeline({
+          defaults: { opacity: 0, ease: 'back(3)', duration: 1 },
+        })
+        .from('#about', { ease: 'linear', autoAlpha: 0 })
+        .from('#content > p', { x: -100, stagger: 0.3 });
+    },
+    { scope: aboutMe }
+  );
 
   const { letters: Heading } = useAnimatedLetters({
-    strArray: string.split(''),
+    strArray: 'About Me'.split(''),
     index: 1,
   });
 
-  return loading ? (
-    loader
-  ) : (
+  return (
     <section ref={aboutMe}>
       <div
         id="about"

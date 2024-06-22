@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { projectList } from '../Helper/Projects';
+import { projectList } from '../../../utils/Projects';
 import {
   slideInRight,
   slideInLeft,
