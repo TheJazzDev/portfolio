@@ -10,7 +10,7 @@ export const projectList = [
     description: 'A financial app that helps users track their finances.',
     languages: 'NextJs TanstackQuery Redux TailwindCSS',
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink: 'https://devsvr.digit-tally.io',
+    liveDemoLink: 'https://app.digit-tally.io',
   },
   {
     id: 'mr-oshodi',
