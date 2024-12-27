@@ -7,10 +7,10 @@ export const projectList = [
   {
     id: 'digit-tally',
     title: 'Digit Tally',
-    description: 'A financial app that helps users track their finances.',
+    description: 'The only accounting software you need',
     languages: 'NextJs TanstackQuery Redux TailwindCSS',
     liveDemo: <FontAwesomeIcon icon={faExternalLink} />,
-    liveDemoLink: 'https://app.digit-tally.io',
+    liveDemoLink: 'https://digit-tally.io',
   },
   {
     id: 'mr-oshodi',
