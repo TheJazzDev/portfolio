@@ -1,6 +1,6 @@
 import classes from './Cube.module.css';
-import {useRef} from 'react';
-import {motion, useAnimationFrame} from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useAnimationFrame } from 'framer-motion';
 import {
   faCss3,
   faGitAlt,
@@ -9,9 +9,9 @@ import {
   faPython,
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Cube = ({id}) => {
+const Cube = ({ id }) => {
   const ref = useRef(null);
 
   useAnimationFrame((t) => {

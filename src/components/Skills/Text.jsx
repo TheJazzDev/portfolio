@@ -9,6 +9,7 @@ const Text = ({ className }) => {
         <span className="text-lightMode-100">HTML</span>,{' '}
         <span className="text-lightMode-100">CSS3</span>,{' '}
         <span className="text-lightMode-100">JavaScript</span>,{' '}
+        <span className="text-lightMode-100">TypeScript</span>,{' '}
         <span className="text-lightMode-100">jQuery</span>,{' '}
         <span className="text-lightMode-100">React</span>,{' '}
         <span className="text-lightMode-100">NextJS</span>,{' '}
@@ -23,21 +24,24 @@ const Text = ({ className }) => {
       </p>
 
       <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[45rem] mb-5">
-        Although I'm not much of a designer, but I am aware of UI/UX design
-        principles and rules, therefore I pay close attention to design elements
-        and enjoy putting my heart and soul into what I produce.
+        While I may not be a designer, I have a strong understanding of UI/UX
+        design principles and pay close attention to design details. I take
+        pride in building aesthetically pleasing, functional, and user-friendly
+        applications, ensuring they are mobile-first, responsive, and optimized
+        for performance.
       </p>
 
       <p className="text-[1.1rem] text-lightMode-paragraph dark:text-darkMode-paragraph max-w-[45rem] mb-5">
-        I also spent a lot of time writing understandable code that can be read
-        by both humans and computers. I optimize my code base for mobile devices
-        first to ensure the best user experience and responsiveness.
+        I write clean, readable, and maintainable code that is easy to
+        understand for both developers and machines. My goal is to create
+        scalable solutions that enhance user experience while maintaining code
+        efficiency.
       </p>
 
       <p className="text-[1.1rem] text-lightMode-100">
         {'{'}
         <span className="text-lightMode-paragraph dark:text-darkMode-paragraph">
-          Convinced && letWork{' '}
+          Convinced && readyToBuild{' '}
         </span>{' '}
         ?{' '}
         <NavLink
